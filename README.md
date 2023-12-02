@@ -1,11 +1,14 @@
 
 # Protein Fitness Prediction - ML4science - EPFL 2023 - CS-433
 
-Welcome to our ML4science project in collaboration with the [Laboratory of the Physics and Biological Systems](https://www.epfl.ch/labs/lpbs/) based at EPFL.
+Welcome to our ML4science project in collaboration with the [Laboratory of the Physics and Biological Systems](https://www.epfl.ch/labs/lpbs/) based at EPFL. The aim of this project is to predict the amino acid sequence of a protein based on a desired fitness value. 
 
-. The goal is to predict an individual's risk to cardiovascular diseases. To achieve this, we implemented various machine learning methods and tested them. We found Ridge Regression as the most effective method, achieving an accuracy of 86.8% and an F1 score of 42.0%.
+This project is built upon the paper ['Learning protein fitness models from evolutionary and assay-labeled'](https://www.nature.com/articles/s41587-021-01146-5) and its corresponding [Git Hub](https://github.com/chloechsu/combining-evolutionary-and-assay-labelled-data). 
 
-## Getting Started
+
+## Data
+
+Two datasets are 
 
 ### Data Importation
 1. Download the following dataset files at https://github.com/epfml/ML_course/tree/master/projects/project1/data:
