@@ -1,7 +1,7 @@
 
 # Protein Fitness Prediction - ML4science - EPFL 2023 - CS-433
 
-Welcome to our ML4science project in collaboration with the Laboratory of the Physics and Biological Systems (LPBS)[https://www.epfl.ch/labs/lpbs/] based at EPFL.
+Welcome to our ML4science project in collaboration with the (Laboratory of the Physics and Biological Systems)[https://www.epfl.ch/labs/lpbs/] based at EPFL.
 
 . The goal is to predict an individual's risk to cardiovascular diseases. To achieve this, we implemented various machine learning methods and tested them. We found Ridge Regression as the most effective method, achieving an accuracy of 86.8% and an F1 score of 42.0%.
 
