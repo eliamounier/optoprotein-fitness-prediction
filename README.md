@@ -16,6 +16,8 @@ This project is built upon the paper ['Learning protein fitness models from evol
 - `` , required to produce the msa.a2m
 - `.a2m`:
 
+## Installation
+
 ## Models
 
 
