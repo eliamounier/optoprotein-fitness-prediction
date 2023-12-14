@@ -14,18 +14,23 @@ To get started, follow the steps below to set up the project on your local machi
 git clone https://github.com/CS-433/ml-project-2-oknneig.git
 ```
 ## Navigate to the project directory
+```bash
 cd ml-project-2-oknneig
-
+```
 ## Install the environment
+```bash
 conda env create -f environment_updated.yml
+```
+```bash
 conda activate protein_fitness_prediction
-
+```
 ## Install the plmc package
+```bash
 cd $HOME  # (or use another directory for plmc <directory_to_install_plmc> and modify `scripts/plmc.sh` accordingly with the custom directory)
 git clone https://github.com/debbiemarkslab/plmc.git
 cd plmc
 make all-openmp
-
+```
 # Data
 
 ## Assay-labeled dataset
@@ -46,19 +51,21 @@ We utilized the ev Potts model, both augmented and non-augmented.
 To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
 
 ### Supervised (Ridge)
-
+```bash
 python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
-
+```
 ### EV unsupervised:
 Train your model
+```bash
 bash scripts/plmc.sh Q2NB98 Light
-
+```
+```bash
 python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=-1
-
+```
 ### EV augmented (supervised + unsupervised)
-
+```bash
 python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
-
+```
 Note: Modify dataset names (Light, Q2NB98) according to your requirements.
 
 # Notebooks
