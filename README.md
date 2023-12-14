@@ -10,8 +10,9 @@ To get started, follow the steps below to set up the project on your local machi
 
 
 ## Clone the repository
+```bash
 git clone https://github.com/CS-433/ml-project-2-oknneig.git
-
+```
 ## Navigate to the project directory
 cd ml-project-2-oknneig
 
