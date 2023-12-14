@@ -34,7 +34,7 @@ make all-openmp
 
 ## Evolutionary dataset
 
-This dataset consists of homologous sequences from different species or related sequences from the same species but at different evolutionary distances. An A2M file (alignment to model) is used to represent multiple sequence alignments (MSA) in bioinformatics. Processed multiple sequence alignments are stored in .a2m files.
+- `-.a2m`:This dataset consists of homologous sequences from different species or related sequences from the same species but at different evolutionary distances. An A2M file (alignment to model) is used to represent multiple sequence alignments (MSA) in bioinformatics. Processed multiple sequence alignments are stored in .a2m files.
 
 # How to Run the Models
 
