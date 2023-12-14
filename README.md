@@ -63,12 +63,12 @@ Note: Modify dataset names (Light, Q2NB98) according to your requirements.
 
 ## Notebooks
 
-- **demo_model_analysis.ipynb:** Evaluate the models' performance using our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
-- **model_analysis.ipynb:** Evaluate the models' performance based on our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
-- **label_data.ipynb:** Process the label dataset to suit our models.
-- **msa_exploration.ipynb:** Analyze the evolutionary dataset and convert it into an A2M format.
-- **sequence_analysis.ipynb:** Identify the optimal protein sequence for a specific function, in our case, high fitness under light conditions while low fitness in dark conditions.
-- **sequence_generator.ipynb:** Generate mutant sequences.
+- `demo_model_analysis.ipynb`: Evaluate the models' performance using our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
+- `model_analysis.ipynb`: Evaluate the models' performance based on our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
+- `label_data.ipynb`: Process the label dataset to suit our models.
+- `msa_exploration.ipynb`: Analyze the evolutionary dataset and convert it into an A2M format.
+- `sequence_analysis.ipynb`: Identify the optimal protein sequence for a specific function, in our case, high fitness under light conditions while low fitness in dark conditions.
+- `sequence_generator.ipynb`: Generate mutant sequences.
 
 ## Additional Models
 
