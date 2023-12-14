@@ -80,7 +80,7 @@ Note: Modify dataset names (Light, Q2NB98) according to your requirements.
 # Additional Models
 
 # References
-[2] Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022 (Model integrates multiple sequence-based features)
+[Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022](https://www.nature.com/articles/s41587-021-01146-5)
 
 # License
 
