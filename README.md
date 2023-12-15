@@ -1,6 +1,6 @@
 # Protein Fitness Prediction - ML4Science - EPFL 2023
 
-Welcome to our ML4science project in collaboration with the Laboratory of the Physics and Biological Systems. The aim of this project is to predict the amino acid sequence of a protein based on a desired fitness value. For our case, we want to maximize the activity of the EL22 protein when exposed to light while minimizing it when in dark conditions. This protein can be used for optogenetic techniques.
+Welcome to our ML4science project in collaboration with the Laboratory of the Physics and Biological Systems. The aim of this project is to predict the best amino acid sequence of a protein for a high fitness value. For our case, we want to maximize the activity of the EL22 protein when exposed to light while minimizing it when in dark conditions. This protein can be used for optogenetic techniques.
 
 This project is built upon the paper 'Learning protein fitness models from evolutionary and assay-labeled' and its corresponding GitHub repository 'combining-evolutionary-and-assay-labelled-data' from Chloe Hsu.
 
