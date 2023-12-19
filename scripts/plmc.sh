@@ -17,7 +17,7 @@
 PROTEIN=$1
 DATASET=$2
 
-PLMC_DIR="$HOME"
+PLMC_DIR="$HOME" #For example: "/home/daul/combining-evolutionary-and-assay-labelled-data/plmc"
     
 mkdir -p inference/$DATASET/plmc
 
