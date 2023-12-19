@@ -46,27 +46,38 @@ make all-openmp
 
 ## Information about models used in the project
 
-We utilized the ev Potts model, both augmented and non-augmented.
+We utilized the ev Potts model augmented and simple ridge regresion.
+
+Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the single_mutants.csv in the folder ... , the double_mutants.csv was too big to be added in the Github. 
 
 To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
 
 ### Supervised (Ridge)
+
+First modify the file as needed, specify the desired output CSV path, specify your dataset_name, to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv), joint_training, and predictor_para
+Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
+
 ```bash
-python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
+python src/train_and_predict.py 
 ```
-### EV unsupervised:
-Train your model
+### EV augmented (supervised + unsupervised):
+First train your model for Light and Darkness 
 ```bash
 bash scripts/plmc.sh Q2NB98 Light
 ```
 ```bash
-python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=-1
+bash scripts/plmc.sh Q2NB98 Darkness
 ```
-### EV augmented (supervised + unsupervised)
+
+Then modify the file as needed, specify the desired output CSV path, specify your dataset_name (Light or Darkness), to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv), joint_training, and predictor_param, predictor_name = ev+onehot
+Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
+
 ```bash
-python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
+python src/train_and_predict.py 
 ```
-Note: Modify dataset names (Light, Q2NB98) according to your requirements.
+Once the model are trained and that you have predict the fitness of your mutated sequences, use `sequence_analysis.ipynb` to determine what is the best sequence. 
+
+(Note that you can find the predicted fitness of our single mutants for both Light and Darkness, onehot and ev+onehot, in the folder ... . The double mutants files where too big to be added in the github)
 
 # Notebooks
 
