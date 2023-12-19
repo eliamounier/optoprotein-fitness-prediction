@@ -12,6 +12,7 @@ import utils
 
 
 REG_COEF_LIST = [1e-1, 1e0, 1e1, 1e2, 1e3]
+np.random.seed(42)
 
 
 class BasePredictor():
