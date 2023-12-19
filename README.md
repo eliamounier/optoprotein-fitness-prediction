@@ -120,9 +120,9 @@ Note that to find the best optogenitic protein sequence, you will have to run fo
 ```bash
 python src/train_and_predict.py 
 ```
-Once the model are trained and that you have predict the fitness of your mutated sequences, use `sequence_analysis.ipynb` to determine what is the best sequence. 
+Once the model are trained and that you have predicted the fitness of your mutated sequences, use `sequence_analysis.ipynb` to determine what is the best sequence. 
 
-(Note that you can find the predicted fitness of our single mutants for both Light and Darkness, onehot and ev+onehot, in the folder `generated`. The double mutants files where too big to be added in the github)
+(Note that you can find the predicted fitness of our single mutants for both Light and Darkness, onehot and ev+onehot, in the folder `generated` as `output_dark_sinlge_mutants_onehot.csv`, `output_light_sinlge_mutants_onehot.csv`,`output_dark_sinlge_mutants_evonehot.csv`, `output_light_sinlge_mutants_evonehot.csv`. The double mutants files where too big to be added in the github)
 
 # Notebooks
 
