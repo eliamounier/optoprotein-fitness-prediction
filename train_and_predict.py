@@ -39,15 +39,15 @@ if __name__ == "__main__":
     
     # Specify your dataset_name, to_predict CSV path, joint_training, and predictor_params, predictor_name
 
-    dataset_name = "data/Darkness/data.csv"
+    dataset = "data/Darkness/data.csv"
     to_predict_csv_path = "data/single_mutants.csv"
     joint_training = "store_true"
     predictor_params = {}
     predictor_name = "ev+onehot"
-    ataset_name = "Darkness"
+    dataset_name = "Darkness"
 
     to_predict = pd.read_csv(to_predict_csv_path)
-    data = pd.read_csv(dataset_name)
+    data = pd.read_csv(dataset)
 
     train_and_predict(
         data, dataset_name, to_predict, predictor_name, joint_training, predictor_params
