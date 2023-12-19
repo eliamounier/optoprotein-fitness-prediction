@@ -59,8 +59,8 @@ We utilized the ev Potts model, both augmented and non-augmented simple ridge re
 
 The output of the scripts are saved in:
 
-'inference': for intermediate files.
-'results': for csv files.
+- `inference`: for intermediate files.
+- `results`: for csv files.
 
 To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
 
