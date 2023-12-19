@@ -48,7 +48,7 @@ make all-openmp
 
 We utilized the ev Potts model augmented and simple ridge regresion.
 
-Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the single_mutants.csv in the folder ... , the double_mutants.csv was too big to be added in the Github. 
+Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the single_mutants.csv in the folder `generated` , the double_mutants.csv was too big to be added in the Github. 
 
 To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
 
@@ -77,7 +77,7 @@ python src/train_and_predict.py
 ```
 Once the model are trained and that you have predict the fitness of your mutated sequences, use `sequence_analysis.ipynb` to determine what is the best sequence. 
 
-(Note that you can find the predicted fitness of our single mutants for both Light and Darkness, onehot and ev+onehot, in the folder ... . The double mutants files where too big to be added in the github)
+(Note that you can find the predicted fitness of our single mutants for both Light and Darkness, onehot and ev+onehot, in the folder `generated`. The double mutants files where too big to be added in the github)
 
 # Notebooks
 
