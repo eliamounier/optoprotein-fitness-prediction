@@ -133,10 +133,9 @@ Once the model are trained and that you have predicted the fitness of your mutat
 - `sequence_analysis.ipynb`: Identify the optimal protein sequence for a specific function, in our case, high fitness under light conditions while low fitness in dark conditions.
 - `sequence_generator.ipynb`: Generate mutant sequences.
 
-# Additional Models
 
 # References
-[Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022](https://www.nature.com/articles/s41587-021-01146-5)
+Chloe Hsu, Hunter Nisonoff, Clara Fannjiang & Jennifer Listgarten [Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022](https://www.nature.com/articles/s41587-021-01146-5)
 
 # License
 
