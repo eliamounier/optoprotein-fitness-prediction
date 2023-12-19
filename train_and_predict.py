@@ -37,7 +37,7 @@ def train_and_predict(
 
 if __name__ == "__main__":
     
-    # Specify your dataset_name, to_predict CSV path, joint_training, and predictor_params, predictor_name
+    # Specify your dataset, dataset_name, to_predict CSV path, joint_training, and predictor_params, predictor_name
 
     dataset = "data/Darkness/data.csv"
     to_predict_csv_path = "data/single_mutants.csv"
