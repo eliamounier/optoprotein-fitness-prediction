@@ -71,7 +71,7 @@ EV augmented (supervised + unsupervised)
 ```bash
 python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
 ```
-Note: Modify dataset names (Q2NB98, Light) according to your requirements. To run the demo data: BLAT_ECOLX BLAT_ECOLX_Ranganathan2015-2500 
+Note: Modify dataset names (Q2NB98, Light) according to your requirements. To run the demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository, they'll become respectively BLAT_ECOLX and BLAT_ECOLX_Ranganathan2015-2500. 
 
  
 
@@ -127,7 +127,7 @@ Once the model are trained and that you have predict the fitness of your mutated
 # Notebooks
 
 - `demo_model_analysis.ipynb`: Evaluate the models' performance using our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
-- `model_analysis.ipynb`: Evaluate the models' performance based on our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
+- `model_analysis.ipynb`: Evaluate the models' performance based on our data and the demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
 - `label_data.ipynb`: Process the label dataset to suit our models.
 - `msa_exploration.ipynb`: Analyze the evolutionary dataset and convert it into an A2M format.
 - `sequence_analysis.ipynb`: Identify the optimal protein sequence for a specific function, in our case, high fitness under light conditions while low fitness in dark conditions.
