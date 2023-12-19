@@ -46,15 +46,43 @@ make all-openmp
 
 ## Information about models used in the project
 
-We utilized the ev Potts model augmented and simple ridge regresion.
+We utilized the ev Potts model, both augmented and non-augmented simple ridge regresion.
 
-Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the `single_mutants.csv` in the folder `generated` , the `double_mutants.csv` was too big to be added in the Github. 
+To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
 
+Supervised (Ridge)
+
+```bash
+python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
+```
+
+EV unsupervised:
+
+Train your model
+
+```bash
+bash scripts/plmc.sh Q2NB98 Light
+```
+```bash
+python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=-1
+```
+EV augmented (supervised + unsupervised)
+
+```bash
+python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
+```
+Note: Modify dataset names (Q2NB98, Light) according to your requirements. To run the demo data: BLAT_ECOLX BLAT_ECOLX_Ranganathan2015-2500 
+
+ 
+
+## In silico evolution
+
+The next step is to predict the mutations that will improve the sensitivity of EL222, aiming for high fitness under light conditions but low fitness in darkness.
+
+Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the `single_mutants.csv` in the folder `generated` , the `double_mutants.csv` was too big to be added in the Github.
 
 ### In sillico evolution supervised (Ridge)
-
-
-First modify the file as needed, specify 
+First modify `train_and_predict.py` as needed, specify 
 
 - the desired output CSV path
 - the dataset (for example for Darkness: "data/Darkness/data.csv")
@@ -78,7 +106,7 @@ bash scripts/plmc.sh Q2NB98 Light
 bash scripts/plmc.sh Q2NB98 Darkness
 ```
 
-Then modify the file as needed, specify 
+Then modify the `train_and_predict.py` as needed, specify 
 
 - the desired output CSV path
 - the dataset (for example for Darkness: "data/Darkness/data.csv")
