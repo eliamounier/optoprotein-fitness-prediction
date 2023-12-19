@@ -51,7 +51,8 @@ We utilized the ev Potts model augmented and simple ridge regresion.
 Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the `single_mutants.csv` in the folder `generated` , the `double_mutants.csv` was too big to be added in the Github. 
 
 
-### Supervised (Ridge)
+### In sillico evolution supervised (Ridge)
+
 
 First modify the file as needed, specify 
 
@@ -68,8 +69,8 @@ Note that to find the best optogenitic protein sequence, you will have to run fo
 ```bash
 python src/train_and_predict.py 
 ```
-### EV augmented (supervised + unsupervised):
-First train your model for Light and Darkness 
+### In silico evolution EV augmented (supervised + unsupervised):
+First train your model for Light and Darkness (note that here we used the dataset of the lab)
 ```bash
 bash scripts/plmc.sh Q2NB98 Light
 ```
