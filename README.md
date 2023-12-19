@@ -50,11 +50,19 @@ We utilized the ev Potts model augmented and simple ridge regresion.
 
 Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the single_mutants.csv in the folder `generated` , the double_mutants.csv was too big to be added in the Github. 
 
-To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
 
 ### Supervised (Ridge)
 
-First modify the file as needed, specify the desired output CSV path, specify your dataset_name, to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv), joint_training, and predictor_para
+First modify the file as needed, specify 
+
+- the desired output CSV path
+- the dataset (for example for Darkness: "data/Darkness/data.csv")
+- the dataset_name (for example: "Darkness")
+- to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv)
+- joint_training = "store_true"
+- predictor_params = {}
+- predictor_name = "onehot"
+  
 Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
 
 ```bash
@@ -69,7 +77,15 @@ bash scripts/plmc.sh Q2NB98 Light
 bash scripts/plmc.sh Q2NB98 Darkness
 ```
 
-Then modify the file as needed, specify the desired output CSV path, specify your dataset_name (Light or Darkness), to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv), joint_training, and predictor_param, predictor_name = ev+onehot
+Then modify the file as needed, specify 
+
+- the desired output CSV path
+- the dataset (for example for Darkness: "data/Darkness/data.csv")
+- the dataset_name (for example: "Darkness")
+- to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv)
+- joint_training = "store_true"
+- predictor_params = {}
+- predictor_name = "ev+onehot"
 Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
 
 ```bash
