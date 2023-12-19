@@ -64,7 +64,7 @@ Train your model
 bash scripts/plmc.sh Q2NB98 Light
 ```
 ```bash
-python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=-1
+python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=0
 ```
 EV augmented (supervised + unsupervised)
 
