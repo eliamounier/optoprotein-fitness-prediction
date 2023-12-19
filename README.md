@@ -137,8 +137,5 @@ Once the model are trained and that you have predicted the fitness of your mutat
 # References
 Chloe Hsu, Hunter Nisonoff, Clara Fannjiang & Jennifer Listgarten [Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022](https://www.nature.com/articles/s41587-021-01146-5)
 
-# License
-
-This project is licensed under the MIT License - see the LICENSE file for details as the same format as# Data
 
 
