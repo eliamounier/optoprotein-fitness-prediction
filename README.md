@@ -8,6 +8,15 @@ This project is built upon the paper 'Learning protein fitness models from evolu
 
 To get started, follow the steps below to set up the project on your local machine.
 
+## Install Minionda3
+
+```bash
+bash Miniconda3-latest-Linux-x86_64.sh -b
+source ~/.bashrc
+rm -rf Miniconda3-latest-Linux-x86_64.sh
+conda init
+conda update conda
+```
 
 ## Clone the repository
 ```bash
