@@ -48,7 +48,7 @@ make all-openmp
 
 We utilized the ev Potts model augmented and simple ridge regresion.
 
-Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the single_mutants.csv in the folder `generated` , the double_mutants.csv was too big to be added in the Github. 
+Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the `single_mutants.csv` in the folder `generated` , the `double_mutants.csv` was too big to be added in the Github. 
 
 
 ### Supervised (Ridge)
