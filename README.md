@@ -2,7 +2,8 @@
 
 Welcome to our ML4science project in collaboration with the Laboratory of the Physics and Biological Systems. The aim of this project is to predict the best amino acid sequence of a protein for a high fitness value. For our case, we want to maximize the activity of the EL22 protein when exposed to light while minimizing it when in dark conditions. This protein can be used for optogenetic techniques.
 
-This project is built upon the paper 'Learning protein fitness models from evolutionary and assay-labeled' and its corresponding GitHub repository 'combining-evolutionary-and-assay-labelled-data' from Chloe Hsu, Hunter Nisonoff, Clara Fannjiang & Jennifer Listgarten [Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022](https://www.nature.com/articles/s41587-021-01146-5) Github link: https://github.com/chloechsu/combining-evolutionary-and-assay-labelled-data.git
+This project is built upon the paper 'Learning protein fitness models from evolutionary and assay-labeled' and its corresponding GitHub repository 'combining-evolutionary-and-assay-labelled-data' from Chloe Hsu, Hunter Nisonoff, Clara Fannjiang & Jennifer Listgarten [Learning protein fitness models from evolutionary and assay-labelled data, Nature Biotechnology 2022](https://www.nature.com/articles/s41587-021-01146-5)
+Github link: https://github.com/chloechsu/combining-evolutionary-and-assay-labelled-data.git
 
 # Installation
 
