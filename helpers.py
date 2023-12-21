@@ -14,6 +14,7 @@ from Bio.Align import MultipleSeqAlignment
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 import os
 
