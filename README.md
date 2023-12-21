@@ -49,28 +49,36 @@ The evolutionary datasets are stored in the `alignments` folder.
 
 
 
-## Model assesment
-
 ### Information about Models Used in the Project
 
-Our project focuses on ridge regression, supervised EV Potts, and Augmented Potts.
+Our project focuses on the following models:
+
+- Ridge Regression
+- Supervised EV Potts
+- Augmented Potts
 
 The outputs of the scripts are saved in:
 
 - `inference/`: for the model parameters.
 - `results/`: for model evaluation CSV files.
 
+### Training and Evaluating a Model
+
 To run a model, use the provided scripts. For instance, when working with the Light assay-labeled dataset and the Q2NB98.a2m evolutionary file:
 
-- Supervised Ridge Regression model evaluation:
+#### Supervised Ridge Regression Model Evaluation:
 
+```bash
+python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
+```
+- Evaluation:
 ```bash
 python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
 ```
 - `n_train = -1` corresponds to an 80/20 split for training and test sets.
 - `n_seeds` corresponds to different random splits.
 
-- Supervised EV pott model evaluation:
+#### Supervised EV pott model evaluation:
 
 1. Train your unsupervised model and save the parameters
 
@@ -82,7 +90,7 @@ bash scripts/plmc.sh Q2NB98 Light
 ```bash
 python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=0
 ```
-- EV augmented :
+#### EV augmented model evaluation:
 
 1. Train your unsupervised model and save the parameters
 
