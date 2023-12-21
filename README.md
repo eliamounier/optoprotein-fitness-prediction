@@ -34,12 +34,15 @@ make all-openmp
 ```
 ## Data
 
-## Assay-labeled dataset
+### Assay-labeled Dataset
 
-- `data.csv`: Contains protein sequences experimentally measured or labeled with fitness-related information.
-- `wt.fasta`: Corresponds to the sequence of the wild-type protein.
+The assay-labeled datasets are stored in the `data` folder.
 
-## Evolutionary dataset
+- **data.csv:** This file contains protein sequences (`seq`) of variants along with their corresponding `log_fitness` values.
+- **wt.fasta:** This file corresponds to the sequence of the wild-type protein. It is essential for the alignment search process. 
+
+
+### Evolutionary dataset
 
 - `-.a2m`:This dataset consists of homologous sequences from different species or related sequences from the same species but at different evolutionary distances. An A2M file (alignment to model) is used to represent multiple sequence alignments (MSA) in bioinformatics. Processed multiple sequence alignments are stored in .a2m files.
 
