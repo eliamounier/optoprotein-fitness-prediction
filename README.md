@@ -142,8 +142,6 @@ Then modify the `train_and_predict.py` as needed, specify
 - joint_training = "store_true"
 - predictor_params = {}
 - predictor_name = "ev+onehot"
-- 
-Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
 
 ```bash
 python src/train_and_predict.py 
