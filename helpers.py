@@ -99,7 +99,43 @@ def split_csv(input_csv_path, output_folder, chunk_size):
         last_chunk_df = df.iloc[num_chunks * chunk_size :, :]
         output_csv_path = os.path.join(output_folder, f"chunk_{num_chunks + 1}.csv")
         last_chunk_df.to_csv(output_csv_path, index=False)
+        
+def plot_spearman_boxplot(base_path):
+    """
+    Plot the results as boxplots.
 
+    Parameters:
+    - base_path: str, the path to the results you want to plot.
+
+    """
+    results = []
+
+    # Iterate over directories
+    for folder in os.listdir(base_path):
+        if folder.startswith("BL_"):
+            path = os.path.join(base_path, folder, "results.csv")
+            training_size = int(folder.split('_')[1])  # Extract the training set size
+
+            if os.path.exists(path):
+                df = pd.read_csv(path)
+                # Check if the expected column exists
+                if 'spearman' in df.columns:
+                    for index, row in df.iterrows():
+                        results.append({'training_size': int(0.2*training_size), 'spearman': row['spearman']})
+                else:
+                    print(f"'spearman_correlation' column not found in {path}")
+
+    # Convert to DataFrame
+    results_df = pd.DataFrame(results)
+
+    # Plotting
+    custom_palette = [((141/255, 211/255, 199/255))]
+    plt.figure(figsize=(10, 6))
+    sns.boxplot(x='training_size', y='spearman', data=results_df, palette=custom_palette)
+    plt.xlabel('Test Set Size')
+    plt.ylabel('Spearman Correlation')
+    plt.savefig('variance_convergence_onehot.pdf', dpi = 300)
+    plt.show()
 
 def find_optimal_sequence(light_df, darkness_df, wt_fitness_D=-2.983813):
     """Find the best sequence for double and single mutants"""
