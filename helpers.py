@@ -13,6 +13,7 @@ from Bio.Align import AlignInfo
 from Bio.Align import MultipleSeqAlignment
 from Bio.SeqRecord import SeqRecord
 from Bio.Seq import Seq
+import matplotlib.pyplot as plt
 
 import os
 
