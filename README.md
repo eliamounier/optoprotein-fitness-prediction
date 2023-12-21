@@ -34,7 +34,7 @@ conda env create -f environment_updated.yml
 ```bash
 conda activate protein_fitness_prediction
 ```
-### 5. Install additional package
+### 5. Install additional packages
 ```bash
 conda install pytorch==1.4.0 cudatoolkit=10.1 -c pytorch
 ```
