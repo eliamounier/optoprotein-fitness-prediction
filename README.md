@@ -39,7 +39,7 @@ make all-openmp
 The assay-labeled datasets can be found in the `data/<targetprotein>/` folder.
 
 - **data.csv:** This file includes protein sequences `seq` of variants along with their corresponding `log_fitness` values.
-- **wt.fasta:** This file represents the sequence of the wild-type protein, crucial for the alignment search process.
+- **wt.fasta:** This file represents the sequence of the wild-type protein, needed for the alignment search process.
 
 ### Evolutionary Dataset
 
