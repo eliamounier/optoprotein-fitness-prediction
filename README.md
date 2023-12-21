@@ -68,9 +68,6 @@ To run a model, use the provided scripts. For instance, when working with the Li
 
 #### Supervised Ridge Regression Model Evaluation:
 
-```bash
-python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
-```
 - Evaluation:
 ```bash
 python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
