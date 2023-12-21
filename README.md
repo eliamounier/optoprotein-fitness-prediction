@@ -45,47 +45,55 @@ The assay-labeled datasets can be found in the `data/<targetprotein>/` folder.
 
 The evolutionary datasets are stored in the `alignments` folder.
 
-- **<msa>.a2m:** The datasets comprises homologous sequences from various species or related sequences for a target protein. The multiple sequence alignment must follow to the .a2m convention and can be obtained using the [hh-suite](https://github.com/soedinglab/hh-suite) package. 
+- **_.a2m:** The datasets comprises homologous sequences from various species or related sequences for a target protein. The multiple sequence alignment must follow to the .a2m convention and can be obtained using the [hh-suite](https://github.com/soedinglab/hh-suite) package. 
 
 
 
-# How to Run the Models
+## Model assesment
 
-## Information about models used in the project
+### Information about Models Used in the Project
 
-We utilized the ev Potts model, both augmented and non-augmented simple ridge regresion.
+Our project focuses on ridge regression, supervised EV Potts, and Augmented Potts.
 
-The output of the scripts are saved in:
+The outputs of the scripts are saved in:
 
-- `inference`: for intermediate files.
-- `results`: for csv files.
+- `inference/`: for the model parameters.
+- `results/`: for model evaluation CSV files.
 
-To run a model, use the provided scripts. For example, to run the Light dataset and the Q2NB98.a2m file:
+To run a model, use the provided scripts. For instance, when working with the Light assay-labeled dataset and the Q2NB98.a2m evolutionary file:
 
-Supervised (Ridge)
+- Supervised Ridge Regression model evaluation:
 
 ```bash
 python src/evaluate.py Light onehot --n_seeds=20 --n_threads=1 --n_train=-1
 ```
+- `n_train = -1` corresponds to an 80/20 split for training and test sets.
+- `n_seeds` corresponds to different random splits.
 
-EV unsupervised:
+- Supervised EV pott model evaluation:
 
-Train your model
+1. Train your unsupervised model and save the parameters
 
 ```bash
 bash scripts/plmc.sh Q2NB98 Light
 ```
+2. Evaluation
+
 ```bash
 python src/evaluate.py Light ev --n_seeds=20 --n_threads=1 --n_train=0
 ```
-EV augmented (supervised + unsupervised)
+- EV augmented :
 
+1. Train your unsupervised model and save the parameters
+
+```bash
+bash scripts/plmc.sh Q2NB98 Light
+```
+2. Evaluation
 ```bash
 python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
 ```
-Note: Modify dataset names (Q2NB98, Light) according to your requirements. To run the demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository, they'll become respectively BLAT_ECOLX and BLAT_ECOLX_Ranganathan2015-2500. 
 
- 
 
 ## In silico evolution
 
