@@ -143,6 +143,8 @@ Then modify the `train_and_predict.py` as needed, specify
 - predictor_params = {}
 - predictor_name = "ev+onehot"
 
+Note that to find the best optogenetic protein sequence, you will have to run for both the Light and Darkness datasets.
+
 ```bash
 python src/train_and_predict.py 
 ```
