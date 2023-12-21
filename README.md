@@ -1,4 +1,4 @@
-### Protein Fitness Prediction - ML4Science - EPFL 2023
+# Protein Fitness Prediction - ML4Science - EPFL 2023
 
 Welcome to our ML4science project in collaboration with the [Laboratory of the Physics and Biological Systems at EPFL](https://www.epfl.ch/labs/lpbs/). The aim of this project is to predict the amino acid sequence of a protein based on a desired fitness value. For our case, we want to maximize the activity of the EL222 optoprotein when exposed to light while minimizing it when in dark conditions. This protein can be used for optogenetic techniques.
 
