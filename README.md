@@ -100,30 +100,32 @@ python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
 ```
 
 
-## In silico evolution
+## In Silico Evolution
 
-The next step is to predict the mutations that will improve the sensitivity of EL222, aiming for high fitness under light conditions but low fitness in darkness.
+The in silico evolution step aims to identify the EL222 sequence that results in high fitness under light conditions but low fitness in darkness.
 
-Before running the models, you will have to generate mutated sequences with `sequence_generator.ipynb`. Note that you can find the `single_mutants.csv` in the folder `generated` , the `double_mutants.csv` was too big to be added in the Github.
+First, generate double and single-mutant sequences using `sequence_generator.ipynb`. Please note that the output file `single_mutants.csv` can be found in the `generated/` folder. However, `double_mutants.csv` exceeds the size limit for GitHub.
 
-### In sillico evolution supervised (Ridge)
-First modify `train_and_predict.py` as needed, specify 
+### 1. In Silico Evolution Supervised with the Ridge Regression Model
 
-- the desired output CSV path
-- the dataset (for example for Darkness: "data/Darkness/data.csv")
-- the dataset_name (for example: "Darkness")
-- to_predict CSV path (= path to the file you want to predict, in our case single_mutants.csv and double_mutants.csv)
-- joint_training = "store_true"
-- predictor_params = {}
-- predictor_name = "onehot"
-  
-Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
+First, modify `src/train_and_predict.py` as needed. Specify the following parameters:
+
+- The desired output CSV path
+- The dataset (for example, for Darkness: "data/Darkness/data.csv")
+- The dataset_name (for example: "Darkness")
+- The to_predict CSV path (the path to the file you want to predict, in our case `single_mutants.csv` and `double_mutants.csv`)
+- `joint_training = "store_true"`
+- `predictor_params = {}`
+- `predictor_name = "onehot"`
+
+Note that to find the best optogenetic protein sequence, you will have to run for both the Light and Darkness datasets.
 
 ```bash
 python src/train_and_predict.py 
 ```
-### In silico evolution EV augmented (supervised + unsupervised):
-First train your model for Light and Darkness (note that here we used the dataset of the lab)
+
+### 2. In silico evolution with the EV augmented model:
+First train your model for Light and Darkness 
 ```bash
 bash scripts/plmc.sh Q2NB98 Light
 ```
@@ -140,16 +142,18 @@ Then modify the `train_and_predict.py` as needed, specify
 - joint_training = "store_true"
 - predictor_params = {}
 - predictor_name = "ev+onehot"
+- 
 Note that to find the best optogenitic protein sequence, you will have to run for both the Light and Darkness dataset.
 
 ```bash
 python src/train_and_predict.py 
 ```
-Once the model are trained and that you have predicted the fitness of your mutated sequences, use `sequence_analysis.ipynb` to determine what is the best sequence. 
 
-(Note that you can find the predicted fitness of our single mutants for both Light and Darkness, onehot and ev+onehot, in the folder `generated` as `output_dark_sinlge_mutants_onehot.csv`, `output_light_sinlge_mutants_onehot.csv`,`output_dark_sinlge_mutants_evonehot.csv`, `output_light_sinlge_mutants_evonehot.csv`. The double mutants files where too big to be added in the github)
+### Find the Right Sequence
 
-# Notebooks
+After training the models and predicting the fitness of your mutated sequences, use `sequence_analysis.ipynb` to determine the best sequence.
+
+## Notebooks
 
 - `demo_model_analysis.ipynb`: Evaluate the models' performance using our data and demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
 - `model_analysis.ipynb`: Evaluate the models' performance based on our data and the demo data from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
