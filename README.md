@@ -157,9 +157,13 @@ After training the models and predicting the fitness of your mutated sequences, 
 
 - **`label_data.ipynb`**: Process the original LPBS assay-labeled dataset.
 - **`msa_exploration.ipynb`**: Analyze the evolutionary dataset and convert it into an A2M format.
-- **`model_analysis.ipynb`**: Analyze the models' performance using our dataset and the demo dataset from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
+- **`demo_model_analysis.ipynb`** and **`additional_exp_analysis.ipynb`**: Analyze the models' performance using the LPBS datasets and the demo datasets from the 'combining-evolutionary-and-assay-labelled-data' GitHub repository.
 - **`sequence_generator.ipynb`**: Generate mutant sequences.
 - **`sequence_analysis.ipynb`**: Identify the optimal protein sequence for a specific function—in our case, achieving high fitness under light conditions while maintaining low fitness in dark conditions.
+
+## Key file scripts
+
+**`src/evaluate_multiprocessing.py`**,**`src/predictors/onehot.py`**, **`src/predictors/evonehot.py`** , **`src/utils/metrics.py`** are key file scripts of our project.
 
 
 
