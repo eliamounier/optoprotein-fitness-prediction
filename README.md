@@ -17,7 +17,7 @@ git clone https://github.com/CS-433/ml-project-2-oknneig.git
 ```bash
 cd ml-project-2-oknneighbors
 ```
-### Install the environment
+### 3. Create the environment
 ```bash
 conda env create -f environment_updated.yml
 ```
@@ -25,7 +25,7 @@ conda env create -f environment_updated.yml
 ```bash
 conda activate protein_fitness_prediction
 ```
-### Install the plmc package
+### 4. Install the plmc package
 ```bash
 cd $HOME  # (or use another directory for plmc <directory_to_install_plmc> and modify `scripts/plmc.sh` accordingly with the custom directory)
 git clone https://github.com/debbiemarkslab/plmc.git
