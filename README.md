@@ -104,7 +104,7 @@ python src/evaluate.py Light ev+onehot --n_seeds=20 --n_threads=1 --n_train=-1
 
 The in silico evolution step aims to identify the EL222 sequence that results in high fitness under light conditions but low fitness in darkness.
 
-First, generate double and single-mutant sequences using `sequence_generator.ipynb`. Please note that the output file `single_mutants.csv` can be found in the `generated/` folder. However, `double_mutants.csv` exceeds the size limit for GitHub.
+First, generate double and single-mutant sequences using `sequence_generator.ipynb`. Please note that the output file `single_mutants.csv` can be found in the `generated/` folder. `double_mutants.csv` exceeds the size limit for GitHub.
 
 ### 1. In Silico Evolution Supervised with the Ridge Regression Model
 
