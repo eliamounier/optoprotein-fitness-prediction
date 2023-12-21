@@ -163,7 +163,7 @@ After training the models and predicting the fitness of your mutated sequences, 
 
 ## Key file scripts
 
-**`src/evaluate_multiprocessing.py`**,**`src/predictors/onehot.py`**, **`src/predictors/evonehot.py`** , **`src/utils/metrics.py`** are key file scripts of our project.
+Note: **`src/evaluate_multiprocessing.py`**,**`src/predictors/onehot_predictors.py`**, **`src/predictors/ev_predictors.py`** , **`src/utils/metrics.py`** are key file scripts of our project. 
 
 
 
