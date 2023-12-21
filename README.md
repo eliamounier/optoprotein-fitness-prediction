@@ -36,16 +36,16 @@ make all-openmp
 
 ### Assay-labeled Dataset
 
-The assay-labeled datasets can be found in the `data` folder.
+The assay-labeled datasets can be found in the `data/.../` folder.
 
-- **data.csv:** This file includes protein sequences (`seq`) of variants along with their corresponding `log_fitness` values.
+- **data.csv:** This file includes protein sequences `seq` of variants along with their corresponding `log_fitness` values.
 - **wt.fasta:** This file represents the sequence of the wild-type protein, crucial for the alignment search process.
 
 ### Evolutionary Dataset
 
 The evolutionary datasets are stored in the `alignments` folder.
 
-- **-.a2m:** This dataset comprises homologous sequences from various species or related sequences within the same species but at different evolutionary distances. The multiple sequence alignment must adhere to the .a2m convention and can be obtained using the hh-suite package ([GitHub](https://github.com/soedinglab/hh-suite)).
+- **-.a2m:** The datasets comprises homologous sequences from various species or related sequences for a target protein. The multiple sequence alignment must follow to the .a2m convention and can be obtained using the [hh-suite](https://github.com/soedinglab/hh-suite) package .
 
 
 
