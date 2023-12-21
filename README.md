@@ -45,7 +45,7 @@ The assay-labeled datasets can be found in the `data/<targetprotein>/` folder.
 
 The evolutionary datasets are stored in the `alignments` folder.
 
-- **-.a2m:** The datasets comprises homologous sequences from various species or related sequences for a target protein. The multiple sequence alignment must follow to the .a2m convention and can be obtained using the [hh-suite](https://github.com/soedinglab/hh-suite) package .
+- **<msa>.a2m:** The datasets comprises homologous sequences from various species or related sequences for a target protein. The multiple sequence alignment must follow to the .a2m convention and can be obtained using the [hh-suite](https://github.com/soedinglab/hh-suite) package. 
 
 
 
