@@ -9,7 +9,7 @@ This project is built upon the paper ['Learning protein fitness models from evol
 
 To get started, follow the steps below to set up the project on your local machine. Please be aware that our development was based on the EPFL's Izar cluster. You may need to make adjustments according to your own setup.
 
-## 1. Install Minionda3
+### 1. Install Minionda3
 ```bash
 bash Miniconda3-latest-Linux-x86_64.sh -b
 source ~/.bashrc
