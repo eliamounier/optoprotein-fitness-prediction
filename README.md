@@ -9,15 +9,24 @@ This project is built upon the paper ['Learning protein fitness models from evol
 
 To get started, follow the steps below to set up the project on your local machine. Please be aware that our development was based on the EPFL's Izar cluster. You may need to make adjustments according to your own setup.
 
-### 1. Clone the repository
+## 1. Install Minionda3
+```bash
+bash Miniconda3-latest-Linux-x86_64.sh -b
+source ~/.bashrc
+rm -rf Miniconda3-latest-Linux-x86_64.sh
+conda init
+conda update conda
+```
+
+### 2. Clone the repository
 ```bash
 git clone https://github.com/CS-433/ml-project-2-oknneig.git
 ```
-### 2. Navigate to the project directory
+### 3. Navigate to the project directory
 ```bash
 cd ml-project-2-oknneighbors
 ```
-### 3. Create the environment
+### 4. Create the environment
 ```bash
 conda env create -f environment_updated.yml
 ```
@@ -25,7 +34,7 @@ conda env create -f environment_updated.yml
 ```bash
 conda activate protein_fitness_prediction
 ```
-### 4. Install the plmc package
+### 5. Install the plmc package
 ```bash
 cd $HOME  # (or use another directory for plmc <directory_to_install_plmc> and modify `scripts/plmc.sh` accordingly with the custom directory)
 git clone https://github.com/debbiemarkslab/plmc.git
