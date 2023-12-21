@@ -39,7 +39,7 @@ conda activate protein_fitness_prediction
 conda install pytorch==1.4.0 cudatoolkit=10.1 -c pytorch
 ```
 ```bash
-pip install torchvision==0.5.0 (conda fails here)
+pip install torchvision==0.5.0 
 ```
 ```bash
 pip install torchaudio==0.5.0
