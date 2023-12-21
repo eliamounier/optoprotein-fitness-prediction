@@ -110,25 +110,21 @@ def plot_spearman_boxplot(base_path):
     """
     results = []
 
-    # Iterate over directories
     for folder in os.listdir(base_path):
         if folder.startswith("BL_"):
             path = os.path.join(base_path, folder, "results.csv")
-            training_size = int(folder.split('_')[1])  # Extract the training set size
+            training_size = int(folder.split('_')[1])  
 
             if os.path.exists(path):
                 df = pd.read_csv(path)
-                # Check if the expected column exists
                 if 'spearman' in df.columns:
                     for index, row in df.iterrows():
                         results.append({'training_size': int(0.2*training_size), 'spearman': row['spearman']})
                 else:
                     print(f"'spearman_correlation' column not found in {path}")
 
-    # Convert to DataFrame
     results_df = pd.DataFrame(results)
 
-    # Plotting
     custom_palette = [((141/255, 211/255, 199/255))]
     plt.figure(figsize=(10, 6))
     sns.boxplot(x='training_size', y='spearman', data=results_df, palette=custom_palette)
