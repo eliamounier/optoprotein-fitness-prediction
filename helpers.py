@@ -175,7 +175,7 @@ def find_optimal_sequence(light_df, darkness_df, wt_fitness_D=-2.983813):
 
 
 def calculate_sequence_homology(fasta_file):
-    """this function calculates the sequences homolgy"""
+    """Finds the sequences homolgy"""
     alignment = AlignIO.read(fasta_file, "fasta")
     num_sequences = len(alignment)
     length_of_alignment = alignment.get_alignment_length()
@@ -217,7 +217,7 @@ def convert_to_correct_a2m(a2m_filename, output_filename):
 
 def remove_high_gap_sequences(input_file, output_file, gap_threshold=30):
     """
-    remove sequences that have more than 30% gaps.
+    Remove sequences that have more than 30% gaps.
     """
 
     alignment = AlignIO.read(input_file, "fasta")
