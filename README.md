@@ -36,7 +36,7 @@ make all-openmp
 
 ### Assay-labeled Dataset
 
-The assay-labeled datasets can be found in the `data/.../` folder.
+The assay-labeled datasets can be found in the `data/<target protein>/` folder.
 
 - **data.csv:** This file includes protein sequences `seq` of variants along with their corresponding `log_fitness` values.
 - **wt.fasta:** This file represents the sequence of the wild-type protein, crucial for the alignment search process.
