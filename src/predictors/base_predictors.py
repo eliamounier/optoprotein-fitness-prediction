@@ -11,7 +11,7 @@ from sklearn.metrics import make_scorer
 import utils
 
 
-REG_COEF_LIST = [1e-1, 1e0, 1e1, 1e2, 1e3]
+REG_COEF_LIST = [1e-4, 1e-3, 1e-2, 1e-1, 1e0, 1e1, 1e2, 1e3]
 np.random.seed(42)
 
 
@@ -97,7 +97,7 @@ class BaseRegressionPredictor(BasePredictor):
             for rc in REG_COEF_LIST:
                 model = self.linear_model_cls(alpha=rc)
                 score = cross_val_score(
-                    model, X, train_labels, cv=5,
+                    model, X, train_labels, cv=3,
                     scoring=make_scorer(utils.spearman)).mean()
                 if score > best_score:
                     best_rc = rc
