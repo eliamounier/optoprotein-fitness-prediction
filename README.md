@@ -5,43 +5,34 @@ Welcome to our ML4science project in collaboration with the [Laboratory of the P
 This project is built upon the paper ['Learning protein fitness models from evolutionary and assay-labeled'](https://www.nature.com/articles/s41587-021-01146-5) and its corresponding GitHub repository ['combining-evolutionary-and-assay-labelled-data'](https://github.com/chloechsu/combining-evolutionary-and-assay-labelled-data).
 
 
-# Installation
+## Installation
 
-To get started, follow the steps below to set up the project on your local machine.
+To get started, follow the steps below to set up the project on your local machine. Please be aware that our development was based on the EPFL's Izar cluster. You may need to make adjustments according to your own setup.
 
-## Install Minionda3
-
-```bash
-bash Miniconda3-latest-Linux-x86_64.sh -b
-source ~/.bashrc
-rm -rf Miniconda3-latest-Linux-x86_64.sh
-conda init
-conda update conda
-```
-
-## Clone the repository
+### 1. Clone the repository
 ```bash
 git clone https://github.com/CS-433/ml-project-2-oknneig.git
 ```
-## Navigate to the project directory
+### 2. Navigate to the project directory
 ```bash
-cd ml-project-2-oknneig
+cd ml-project-2-oknneighbors
 ```
-## Install the environment
+### Install the environment
 ```bash
 conda env create -f environment_updated.yml
 ```
+- To activate the environment, run: 
 ```bash
 conda activate protein_fitness_prediction
 ```
-## Install the plmc package
+### Install the plmc package
 ```bash
 cd $HOME  # (or use another directory for plmc <directory_to_install_plmc> and modify `scripts/plmc.sh` accordingly with the custom directory)
 git clone https://github.com/debbiemarkslab/plmc.git
 cd plmc
 make all-openmp
 ```
-# Data
+## Data
 
 ## Assay-labeled dataset
 
