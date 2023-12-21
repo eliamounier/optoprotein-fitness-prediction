@@ -34,7 +34,18 @@ conda env create -f environment_updated.yml
 ```bash
 conda activate protein_fitness_prediction
 ```
-### 5. Install the plmc package
+### 5. Install additional package
+```bash
+conda install pytorch==1.4.0 cudatoolkit=10.1 -c pytorch
+```
+```bash
+pip install torchvision==0.5.0 (conda fails here)
+```
+```bash
+pip install torchaudio==0.5.0
+```
+
+### 6. Install the plmc package
 ```bash
 cd $HOME  # (or use another directory for plmc <directory_to_install_plmc> and modify `scripts/plmc.sh` accordingly with the custom directory)
 git clone https://github.com/debbiemarkslab/plmc.git
