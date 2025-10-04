@@ -5,6 +5,7 @@ Welcome to our ML4science project in collaboration with the [Laboratory of the P
 This project is built upon the paper ['Learning protein fitness models from evolutionary and assay-labeled'](https://www.nature.com/articles/s41587-021-01146-5) and its corresponding GitHub repository ['combining-evolutionary-and-assay-labelled-data'](https://github.com/chloechsu/combining-evolutionary-and-assay-labelled-data).
 
 
+
 ## Installation
 
 To get started, follow the steps below to set up the project on your local machine. Please be aware that our development was based on the EPFL's Izar cluster. You may need to make adjustments according to your own setup.
